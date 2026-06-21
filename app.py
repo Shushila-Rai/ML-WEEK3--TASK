@@ -6,14 +6,16 @@ import os
 import joblib
 
 
-model_path = os.path.join(os.getcwd(), 'notebook', 'models', 'linear_regression_model.pkl')
-scaler_path = os.path.join(os.getcwd(), 'notebook', 'models', 'data_scaler.pkl')
+
+
+df = pd.read_csv('notebook/data/housing.csv')
+
+
+model_path = 'notebook/models/linear_regression_model.pkl'
+scaler_path = 'notebook/models/data_scaler.pkl'
 
 model = joblib.load(model_path)
 scaler = joblib.load(scaler_path)
-
-
-df = pd.read_csv('notebook\data\housing.csv') 
 
 st.title("🏡 California Housing Analysis & Prediction")
 
