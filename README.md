@@ -6,7 +6,7 @@ This project is a complete end-to-end Machine Learning pipeline that analyzes th
  🚀 Live Demo
 
 A live version of this application can be accessed here:
-[ Streamlit Cloud URL here]
+https://california-housing-project.streamlit.app/
 
 ## 📋 Project Overview
 

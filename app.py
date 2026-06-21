@@ -3,7 +3,6 @@ import pandas as pd
 import joblib
 import os
 
-
 base_path = os.path.dirname(__file__)
 
 data_path = os.path.join(base_path, 'notebook', 'data', 'housing.csv')
@@ -25,7 +24,7 @@ with tab1:
 
 with tab2:
     st.subheader("Model Performance Visualization")
-    st.image('notebook/Screenshots/output.png')
+    st.image('notebook/Screenshots/result of predict model.png')
 
 with tab3:
     st.subheader("House Price Prediction System")
