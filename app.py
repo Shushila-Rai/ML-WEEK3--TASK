@@ -1,22 +1,19 @@
 import streamlit as st
-import joblib
 import pandas as pd
-import numpy as np
-import os
 import joblib
+import os
 
 
+base_path = os.path.dirname(__file__)
+
+data_path = os.path.join(base_path, 'notebook', 'data', 'housing.csv')
+model_path = os.path.join(base_path, 'notebook', 'models', 'linear_regression_model.pkl')
+scaler_path = os.path.join(base_path, 'notebook', 'models', 'data_scaler.pkl')
 
 
-df = pd.read_csv('notebook/data/housing.csv')
-
-
-model_path = 'notebook/models/linear_regression_model.pkl'
-scaler_path = 'notebook/models/data_scaler.pkl'
-
+df = pd.read_csv(data_path)
 model = joblib.load(model_path)
 scaler = joblib.load(scaler_path)
-
 st.title("🏡 California Housing Analysis & Prediction")
 
 tab1, tab2, tab3 = st.tabs(["📊 Cleaned Dataset", "📈 Model Performance", "🔮 Price Prediction"])
@@ -28,7 +25,7 @@ with tab1:
 
 with tab2:
     st.subheader("Model Performance Visualization")
-    st.image('notebook\Screenshots\output.png')
+    st.image('notebook/Screenshots/output.png')
 
 with tab3:
     st.subheader("House Price Prediction System")
