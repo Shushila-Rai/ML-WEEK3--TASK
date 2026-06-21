@@ -2,10 +2,13 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+import os
+import joblib
 
 
-model_path = r'notebook\models\linear_regression_model.pkl'
-scaler_path = r'notebook\models\data_scaler.pkl'
+model_path = os.path.join(os.getcwd(), 'notebook', 'models', 'linear_regression_model.pkl')
+scaler_path = os.path.join(os.getcwd(), 'notebook', 'models', 'data_scaler.pkl')
+
 model = joblib.load(model_path)
 scaler = joblib.load(scaler_path)
 
