@@ -13,7 +13,7 @@ model = joblib.load(model_path)
 scaler = joblib.load(scaler_path)
 
 
-df = pd.read_csv('F:\ML Internship\ML Week3-Task\data\housing.csv') # Yahan apni dataset file ka naam likhein
+df = pd.read_csv('notebook\data\housing.csv') 
 
 st.title("🏡 California Housing Analysis & Prediction")
 
